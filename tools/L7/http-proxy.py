@@ -27,7 +27,7 @@ def get_http_proxies() -> List[Dict[str, str]]:
     """
     try:
         with requests.get(
-            "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
+            "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text",
             verify=False,
         ) as proxy_list:
             proxies = [
